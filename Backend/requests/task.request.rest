@@ -1,0 +1,27 @@
+###
+get http://localhost:4000/task/
+
+###
+get http://localhost:4000/task/user/67a8c77cb9fcf679a25d7709
+
+###
+post http://localhost:4000/task/create
+Content-Type: application/json
+
+{
+    "title": "Task 2",
+    "description": "Task 2 description",
+    "createdBy": "67a8c77cb9fcf679a25d7709",
+    "dueDate": "2025-02-20"
+}
+
+###
+put http://localhost:4000/task/addMention/67aa15928e6f85e499bd468c
+Content-Type: application/json
+
+{
+    "assignedTo": "67aa11fd3adb5f86b4ad3657"
+}
+
+###
+get http://localhost:4000/task/getDayWiseTaskCount/67c3ecd0150a5525193e7c58

@@ -1,0 +1,36 @@
+###
+get http://localhost:4000/user
+
+###
+get http://localhost:4000/user/getGrp/67b9ee95c62545be6056dd01
+###
+post http://localhost:4000/user/register
+Content-Type: application/json
+
+{
+    "name": "Black",
+    "email": "black@gmail.com",
+    "password": "123456",
+    "contact": "9999888880"
+}
+
+###
+post http://localhost:4000/user/login
+Content-Type: application/json
+
+{
+    "email": "black@gmail.com",
+    "password": "123456"
+}
+
+###
+put http://localhost:4000/user/67aa11fd3adb5f86b4ad3657
+Content-Type: application/json
+
+{
+    "name": "Red",
+    "email": "blue@gmail.com"
+}
+
+###
+delete http://localhost:4000/user/67aa11dd96be83112fbba8c9

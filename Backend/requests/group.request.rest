@@ -1,0 +1,42 @@
+###
+get http://localhost:4000/group
+
+###
+post http://localhost:4000/group/create/67aa11fd3adb5f86b4ad3657
+Content-Type: application/json
+
+{
+    "name": "Group 1",
+    "description": "Group 1 description"
+}
+
+###
+put http://localhost:4000/group/addPeople/67aa13458e6f85e499bd4678
+Content-Type: application/json
+
+{
+    "people": ["67aa153d8e6f85e499bd467d"]
+}
+
+###
+put http://localhost:4000/group/addTask/67c04f31674730542771d2e0
+Content-Type: application/json
+
+{
+    "title": "Task 81",
+    "description": "Task 7 description",
+    "createdBy": "67c04d08674730542771d2d2",
+    "assignedTo": ["red"],
+    "dueDate": "2025-02-20"
+}
+
+###
+put http://localhost:4000/group/addPeople/67c04f31674730542771d2e0
+Content-Type: application/json
+
+{
+    "people": ["blue"]
+}
+
+###
+get http://localhost:4000/group/getTasks/67c04cf4674730542771d2cf
